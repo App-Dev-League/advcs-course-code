@@ -1,7 +1,9 @@
 #same implementation as: https://www.geeksforgeeks.org/merge-sort/
+import math
+
 def merge_sort(arr:list):
 	if len(arr) > 1:
-		mid = len(arr)/2 
+		mid = math.ceil(len(arr)/2) 
 		L = arr[:mid]
 		R = arr[mid:]
 		merge_sort(L)
@@ -23,4 +25,5 @@ def merge_sort(arr:list):
 			arr[k] = R[j]
 			j += 1
 			k += 1
+
  
