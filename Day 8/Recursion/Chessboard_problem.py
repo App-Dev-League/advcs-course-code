@@ -23,5 +23,4 @@ def solve(num=0,rep=[]):
 					rep.pop()
 
 board=[input() for i in range(8)]
-solve()
 print(ans)
