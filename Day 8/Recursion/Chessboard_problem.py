@@ -1,4 +1,4 @@
-#Problem: https://cses.fi/problemset/task/1624
+#problem: https://cses.fi/problemset/task/1624
 board=[""]*8
 ans=0
 
