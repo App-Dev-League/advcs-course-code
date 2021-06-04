@@ -1,1 +1,1 @@
-https://keras.io/api/datasets/fashion_mnist/
+https://keras.io/api/datasets/mnist/
