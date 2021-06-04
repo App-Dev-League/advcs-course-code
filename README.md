@@ -1,2 +1,2 @@
 # advcs-course-code
-This is the code from the Advanced Computer Science Class from App Dev League.
+Code for the Advanced Multi-Disciplinary CS Course from App Dev League (June-July 2021).
