@@ -1,7 +1,13 @@
 from flask import Flask, render_template, request
 from random import choice
+import tensorflow as tf
+import keras
+from keras.models import load_model
+import pandas as pd
 
 web_site = Flask(__name__)
+
+model = load_model('model.h5')
 
 number_list = [
 	100, 101, 200, 201, 202, 204, 206, 207, 300, 301, 302, 303, 304, 305, 307, 400, 401, 402, 403, 404, 405, 406, 408, 409, 410, 411, 412, 413, 414, 415,
