@@ -3,6 +3,7 @@
 <html>
 	<head>
 		<title>Flask Template</title>
+    <!-- css -->
     <style>
       form {
         margin: 0 auto;
@@ -17,11 +18,19 @@
         margin-top: 20px;
       }
     </style>
+
 	</head>
+
+  <!-- main code -->
 	<body>
-		<form action="/user">
-			<input type="text" placeholder="username" name="username"></input>
-			<input type="submit" value="go to your page"></input>
+		<form>
+			<input type="text" placeholder="username" name="input1"></input>
+      <input type="text" placeholder="username" name="input2"></input>
+      <input type="text" placeholder="username" name="input3"></input>
+      <input type="text" placeholder="username" name="input4"></input>
+
+			<input type="submit" value="predict"></input>
 		</form>
 	</body>
+
 </html>
