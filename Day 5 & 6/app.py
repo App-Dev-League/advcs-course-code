@@ -29,6 +29,7 @@ def index():
 		dataFrame = pd.DataFrame(data)
 		# make prediction
 		result = model.predict(dataFrame)
+		print(result)
 
 		#based on binary value from model, create a sentence
 		if(result == 1):
