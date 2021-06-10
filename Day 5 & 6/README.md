@@ -1,4 +1,6 @@
+```
 $ If running in your own text editor
+```
 
 ## Dependencies
 In order to install all dependencies, run `pip install -r requirements.txt` in your terminal or command prompt. 
