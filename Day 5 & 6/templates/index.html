@@ -2,7 +2,8 @@
 
 <html>
 	<head>
-		<title>Flask Template</title>
+		<title>Heart Prediction Project</title>
+    
     <!-- css -->
     <style>
       form {
@@ -23,7 +24,11 @@
 
   <!-- main code -->
 	<body>
+    
+    <!-- input form -->
 		<form method="POST">
+
+      <!-- user inputs -->
 			<input type="number" placeholder="age" name="age"></input>
       <input type="number" placeholder="sex" name="sex"></input>
       <input type="number" placeholder="blood pressure" name="bp"></input>
@@ -34,9 +39,14 @@
       <input type="number" placeholder="num of major vessels (0-3)" name="caa"></input>
       <input type="number" placeholder="max heart rate" name="max_hr"></input>
 
+      <!-- prediction button -->
 			<input type="submit" value="predict"></input>
+
+
 		</form>
 
+
+    <!-- getting result from flask backend -->
     {{ output }}
 
 	</body>
