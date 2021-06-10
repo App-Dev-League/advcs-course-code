@@ -14,21 +14,21 @@ def index():
 	if request.method == 'POST': # if form is submitted
 
 		# get all values from the form
-		age = float(request.form["age"])
-		sex = float(request.form["sex"])
-		bp = float(request.form["bp"])
-		exang = float(request.form["exang"])
-		cp = float(request.form["cp"])
-		chol = float(request.form["chol"])
-		bs = float(request.form["bs"])
-		caa = float(request.form["caa"])
-		max_hr = float(request.form["max_hr"])
+		age = int(request.form["age"])
+		sex = int(request.form["sex"])
+		bp = int(request.form["bp"])
+		exang = int(request.form["exang"])
+		cp = int(request.form["cp"])
+		chol = int(request.form["chol"])
+		bs = int(request.form["bs"])
+		caa = int(request.form["caa"])
+		max_hr = int(request.form["max_hr"])
 
 		# make a dataframe with all the inputs
 		data = {'age': [age], 'sex': [sex], 'trtbps': [bp], 'exang': [exang], 'cp': [cp], 'chol': [chol], 'fbs': [bs], 'caa': [caa], 'thalachh': [max_hr]}
 		dataFrame = pd.DataFrame(data)
 		# make prediction
-		result = model.predict(dataFrame)
+		result = model.predict(dataFrame)[0]
 		print(result)
 
 		#based on binary value from model, create a sentence
