@@ -30,17 +30,18 @@ def index():
 		dataFrame = pd.DataFrame(data)
 		# make prediction
 		result = model.predict(dataFrame)[0]
-		print(result)
+		print(result[0])
 
-		#based on binary value from model, create a sentence
+		# based on binary value from model, create a sentence
 		if(result == 1):
 			output  = "High chance of heart attack"
 		else:
 			output = "Low chance of heart attack"
 
+		print(output)
 		return render_template('index.html', output=output)
 
-	else: 
+	else:
 		return render_template('index.html', output="")
 
 web_site.run(host='0.0.0.0', port=8080)
