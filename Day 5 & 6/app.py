@@ -22,9 +22,10 @@ def index():
 		chol = float(request.form["chol"])
 		bs = float(request.form["bs"])
 		caa = float(request.form["caa"])
+		max_hr = float(request.form["max_hr"])
 
 		# make a dataframe with all the inputs
-		data = {'age': [age], 'sex': sex, 'bp': bp, 'exang': exang, 'cp': cp, 'chol': chol, 'bs': bs, 'caa': caa}
+		data = {'age': [age], 'sex': [sex], 'trtbps': [bp], 'exang': [exang], 'cp': [cp], 'chol': [chol], 'fbs': [bs], 'caa': [caa], 'thalachh': [max_hr]}
 		dataFrame = pd.DataFrame(data)
 		# make prediction
 		result = model.predict(dataFrame)
