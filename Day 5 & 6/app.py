@@ -1,6 +1,5 @@
 # import all required packages
 from flask import Flask, render_template, request
-from random import choice
 import tensorflow as tf
 import keras
 from keras.models import load_model
@@ -12,10 +11,25 @@ model = load_model('model.h5') # load ML model
 
 @web_site.route('/', methods=['GET', 'POST'])
 def index():
-	if request.method == 'POST':
-		data = {}
+	if request.method == 'POST': # if form is submitted
+
+		# get all values from the form
+		age = float(request.form["age"])
+		sex = float(request.form["sex"])
+		bp = float(request.form["bp"])
+		exang = float(request.form["exang"])
+		cp = float(request.form["cp"])
+		chol = float(request.form["chol"])
+		bs = float(request.form["bs"])
+		caa = float(request.form["caa"])
+
+		# make a dataframe with all the inputs
+		data = {'age': [age], 'sex': sex, 'bp': bp, 'exang': exang, 'cp': cp, 'chol': chol, 'bs': bs, 'caa': caa}
 		dataFrame = pd.DataFrame(data)
+		# make prediction
 		result = model.predict(dataFrame)
+
+		#based on binary value from model, create a sentence
 		if(result == 1):
 			output  = "High chance of heart attack"
 		else:
