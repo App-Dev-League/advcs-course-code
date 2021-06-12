@@ -30,7 +30,7 @@ def index():
 		dataFrame = pd.DataFrame(data)
 		# make prediction
 		result = model.predict(dataFrame)[0]
-		print(result[0])
+		print(result[0]) # log raw prediction from ml model to console
 
 		# based on binary value from model, create a sentence
 		if(result == 1):
@@ -38,7 +38,7 @@ def index():
 		else:
 			output = "Low chance of heart attack"
 
-		print(output)
+		print(output) # log result to the console
 		return render_template('index.html', output=output)
 
 	else:
