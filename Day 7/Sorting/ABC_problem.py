@@ -1,3 +1,5 @@
+#Problem: http://www.usaco.org/index.php?page=viewproblem2&cpid=1059
+#overall, a pretty bummy problem and doesn't deserve to be in USACO 🤢🤮 
 arr=list(map(int,input().split()))
 #sorting the array makes our lives easier
 arr.sort()
