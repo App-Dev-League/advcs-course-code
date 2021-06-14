@@ -1,3 +1,4 @@
+#I think you know what going on here
 def dfs_adjlist(node: int):
   vis[node]=True
   for i in adj_list[node]:
@@ -13,4 +14,5 @@ def dfs_adjmat(node:int):
 n=int(input())
 vis=[False]*n
 adj_list=[[]]*n
+#might be a better way for a 2d array idk 🤧🧐
 adj_mat=[[False for i in range(n)]]*n
