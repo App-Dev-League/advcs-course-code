@@ -1,4 +1,5 @@
 #problem: http://www.usaco.org/index.php?page=viewproblem2&cpid=1136
+#overall, a really good problem with a really interesting application of binary search. Also good as an example for ad hoc. 👍🤌
 import math
 
 def check(num:int):
