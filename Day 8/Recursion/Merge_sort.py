@@ -1,4 +1,6 @@
 #Same implementation as: https://www.geeksforgeeks.org/merge-sort/
+#idk why this is even here
+#might get rid of it. too advanced 🙃😱
 import math
 
 def merge_sort(arr:list):
