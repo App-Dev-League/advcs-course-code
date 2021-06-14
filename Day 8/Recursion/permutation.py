@@ -1,3 +1,5 @@
+#seemed like a twist on the subsets implementation
+#might be kinda hard 🤷🥲
 def permute(n:int,num=1, per=[]):
     if(num==n+1):
         print(per)
