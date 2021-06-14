@@ -1,3 +1,4 @@
+#standard implementation for binary search. idk what else to put 😔😢
 import math
 
 def search(arr: list):
