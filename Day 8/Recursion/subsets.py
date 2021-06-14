@@ -1,3 +1,5 @@
+# idk seemed like a good example for recursion 😅🙂
+
 def subsets(num: int, n:int, subset=[]):
     if(num==n):
         print(subset)
