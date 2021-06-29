@@ -2,6 +2,7 @@
 
 <html>
 	<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 		<title>Heart Prediction Project</title>
 
     <!-- css -->
@@ -25,30 +26,87 @@
   <!-- main code -->
 	<body>
 
+    <h1 class="text-center p-2">Predict the Chance of a Heart Attack</h1>
+
+    
+    <!-- getting result from flask backend -->
+
+    <div class="text-center">
+      {% if output == "Low chance of heart attack" %}
+        <h3 class="text-success">{{ output }} </h3>
+      {% else %}
+        <h3 class="text-danger">{{ output }}</h3>
+      {% endif %}
+    </div>
+
     <!-- input form -->
-		<form method="POST">
+		<form method="POST" class="mb-3">
 
       <!-- user inputs -->
-			<input type="number" placeholder="age" name="age"></input>
-      <input type="number" placeholder="sex (m=1, f=0)" name="sex"></input>
-      <input type="number" placeholder="blood pressure" name="bp"></input>
-      <input type="number" placeholder="exercise induced angina(1/0)" name="exang"></input>
-      <input type="number" placeholder="chest pain (0-3)" name="cp"></input>
-      <input type="number" placeholder="cholestoral" name="chol"></input>
-      <input type="number" placeholder="blood sugar over 120 (1/0)" name="bs"></input>
-      <input type="number" placeholder="num of major vessels (0-3)" name="caa"></input>
-      <input type="number" placeholder="max heart rate" name="max_hr"></input>
+			<input type="number" placeholder="Age" name="age" class="form-control"></input>
+
+      <br/>
+
+      <select name="sex" class="form-control">
+        <option selected>Sex</option>
+        <option value="1">Male</option>
+        <option value="0">Female</option>
+      </select>
+
+      <br/>
+
+      <select name="cp" class="form-control">
+        <option selected>Chest Pain</option>
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+      </select>
+
+      <input type="number" placeholder="Blood Pressure" name="bp" class="form-control"></input>
+
+      <input type="number" placeholder="Cholestoral" name="chol" class="form-control"></input>
+
+      <br/>
+
+      <select name="bs" class="form-control">
+        <option selected>Blood Sugar > 120</option>
+        <option value="1">Yes</option>
+        <option value="0">No</option>
+      </select>
+
+      <input type="number" placeholder="Max Heart Rate" name="max_hr" class="form-control"></input>
+
+      <br/>
+
+      <select name="exang" class="form-control">
+        <option selected>Exercise Induced Agina</option>
+        <option value="1">Yes</option>
+        <option value="0">No</option>
+      </select>
+
+      <br/>
+
+      <select name="caa" class="form-control">
+        <option selected>Number of Major Vessels</option>
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+      </select>
+
+
+      <!-- <input type="number" placeholder="Number of Major Vessels (0-3)" name="caa" class="form-control"></input> -->
+
+
 
       <!-- prediction button -->
-			<input type="submit" value="predict"></input>
-
+			<input type="submit" value="Predict" class="btn btn-primary" class="form-control"></input>
 
 		</form>
 
-
-    <!-- getting result from flask backend -->
-    {{ output }}
-
 	</body>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
 </html>

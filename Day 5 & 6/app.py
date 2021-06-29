@@ -8,7 +8,6 @@ import pandas as pd
 web_site = Flask(__name__)
 
 model = load_model('model.h5') # load ML model
-output = " "
 
 @web_site.route('/', methods=['GET', 'POST'])
 def index():
