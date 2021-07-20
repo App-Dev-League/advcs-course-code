@@ -14,9 +14,9 @@ def solve(p:int,q:int,r:int):
     area=0
     if(x[p]==x[q] and y[p]==y[r]):
         area=abs(y[p]-y[q])*abs(x[r]-x[p])
-    if(x[r]==x[q] and y[p]==y[q]):
+    elif(x[r]==x[q] and y[p]==y[q]):
         area=abs(y[r]-y[q])*abs(x[p]-x[q])
-    if(x[r]==x[q] and y[p]==y[r]):
+    elif(x[r]==x[q] and y[p]==y[r]):
         area=abs(y[r]-y[q])*abs(x[r]-x[p])
     return area
 ans=0
