@@ -8,8 +8,8 @@ def dfs_adjlist(node: int):
 def dfs_adjmat(node:int):
     vis[node]=True
     for i in range(n):
-		if(adj_mat[node][i] and (not vis[i])):
-	    	dfs_adjmat(i)
+        if(adj_mat[node][i] and (not vis[i])):
+	    dfs_adjmat(i)
 
 n=int(input())
 vis=[False]*(n+1)
