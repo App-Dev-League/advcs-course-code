@@ -11,8 +11,6 @@ for i in range(n):
     x[i]=coord[0]
     y[i]=coord[1]
 def solve(p:int,q:int,r:int):
-    global x
-    global y
     area=0
     if(x[p]==x[q] and y[p]==y[r]):
         area=abs(y[p]-y[q])*abs(x[r]-x[p])
