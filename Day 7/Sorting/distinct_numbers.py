@@ -1,8 +1,5 @@
 #Problem: https://cses.fi/problemset/task/1621
 
-#this problem can be better solved with a set, but I feel it is a good problem for showing sorting
-#however, this method does save memory if you're into that stuff 🤔🤓
-#if you use this method, you are a strange person
 n=input()
 arr=list(map(int,input().split()))
 #We keep the answer at one because we don't count if the first value is different
