@@ -1,5 +1,4 @@
 #Problem: http://www.usaco.org/index.php?page=viewproblem2&cpid=963
-#this is basic simulation which is pretty good for beginners. However, it's a bummy problem with an annoying implementation. 😤🥸😑
 import sys
 sys.stdin=open("gymnastics.in", "r")
 sys.stdout=open("gymnastics.out", "w")
