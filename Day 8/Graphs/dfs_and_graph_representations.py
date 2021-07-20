@@ -12,7 +12,7 @@ def dfs_adjmat(node:int):
 			dfs_adjmat(i)
 
 n=int(input())
-vis=[False]*n
-adj_list=[[]]*n
+vis=[False]*(n+1)
+adj_list=[[]]*(n+1)
 #might be a better way for a 2d array idk 🤧🧐
-adj_mat=[[False for i in range(n)]]*n
+adj_mat=[[False]*(n+1)]*(n+1)
