@@ -9,7 +9,7 @@ def dfs_adjmat(node:int):
     vis[node]=True
     for i in range(n):
         if(adj_mat[node][i] and (not vis[i])):
-	    	dfs_adjmat(i)
+	    dfs_adjmat(i)
 
 def dfs_tree(node:int, parent:int):
     vis[node]=True
